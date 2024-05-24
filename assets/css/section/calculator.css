@@ -1,0 +1,569 @@
+.calculator{
+    margin-bottom: 50px;
+}
+.calculator__inner{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+.calculator-description{
+    max-width: 700px;
+}
+
+.calculator__inner{
+    /*background: var(--beige);*/
+    padding: 40px;
+    border-radius: 10px;
+
+}
+
+
+.vanta-canvas{
+    border-radius: 20px;
+}
+
+#birthday{
+    border: white 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#birthday::-moz-selection { /* Для Firefox */
+    background-color: #fff; /* белый фон */
+    color: #333; /* черный текст */
+}
+#birthday::selection {
+    background-color: #fff; /* белый фон */
+    color: #333; /* черный текст */
+}
+
+.calculator-date-label{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.calculator-submit{
+    border-radius: 10px;
+    border: 1px solid var(--beige);
+    background: var(--beige);
+    color: white;
+    cursor: pointer;
+}
+
+.calculator-submit:hover{
+    background: var(--ivory);
+    color: var(--brown);
+}
+
+
+
+.calculator-data-form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.calculator-response{
+    margin-bottom: 50px;
+}
+
+.calculator-response-title{
+    margin-bottom: 30px;
+}
+.calculator-response-inner{
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.calculator-response-user-info{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.calculator-response-user-info-date-birth{
+    padding: 15px;
+    background-color: var(--ivory);
+    border-radius: 15px;
+    color: white;
+}
+
+.calculator-response-user-info-age{
+    padding: 15px;
+    background-color: var(--ivory);
+    border-radius: 15px;
+    color: white;
+}
+
+.calculator-response-columns{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+.calculator-response-chacroanalysis{
+    background-color: var(--ivory);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.calculator-response-chacroanalysis-title{
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.calculator-response-chacroanalysis-item-img{
+    width: 60px;
+    height: auto;
+}
+
+.calculator-response-chacroanalysis-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator-response-chacroanalysis-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 40px 0 20px;
+    border-radius: 40px;
+}
+
+
+.calculator-response-contour-of-specialness{
+    background-color: var(--ivory);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.calculator-response-contour-of-specialness-title{
+    margin-bottom: 20px;
+}
+
+.calculator-response-contour-of-specialness-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator-response-contour-of-specialness-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.calculator-response-contour-of-specialness-item-title{
+    font-size: 18px;
+}
+
+.calculator-response-contour-of-specialness-item-descr{
+    text-align: center;
+    font-style: italic;
+}
+
+
+.calculator-response-typology-of-specialness{
+    padding: 20px;
+    background: var(--ivory);
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.calculator-response-typology-of-specialness-descr::before {
+    content: "●";
+    margin-right: 0.5em;
+}
+
+.calculator-response-typology-of-specialness-title{
+
+}
+
+.calculator-response-typology-of-specialness-descr{
+    margin-left: 20px;
+    font-style: italic;
+}
+
+.calculator-response-womans-and-mans-cob{
+    padding: 20px;
+    background-color: var(--ivory);
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculator-response-womans-and-mans-cob-con{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.calculator-response-columns-2{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+
+.calculator-response-the-power-of-energy{
+    background-color: var(--ivory);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.calculator-response-emotional-type{
+    background-color: var(--ivory);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.calculator-response-the-power-of-energy-title{
+    margin-bottom: 10px;
+}
+
+.calculator-response-the-power-of-energy-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.calculator-response-the-power-of-energy-container-want{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border-radius: 10px;
+    width: 80px;
+}
+
+.calculator-response-the-power-of-energy-container-i-can{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    border-radius: 10px;
+    width: 80px;
+}
+
+.sexual-potential{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator-response-emotional-type-title{
+    margin-bottom: 10px;
+
+}
+.calculator-response-emotional-type-descr{
+    margin-bottom: 20px;
+}
+
+.calculator-response-emotional-type-descr::before {
+    content: "●";
+    margin-right: 0.5em;
+}
+
+.calculator-response-emotional-type-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator-response-emotional-types{
+    font-size: 17px;
+}
+
+
+.calculator-response-periods-of-life{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: var(--ivory);
+    border-radius: 30px;
+    color: white;
+    margin: 0 auto;
+
+}
+
+.calculator-response-periods-of-life-title{
+    margin-bottom: 10px;
+}
+
+.calculator-response-periods-of-life-list{
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+}
+
+.calculator-response-periods-of-life-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#handedness{
+    border: white 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#handedness-label{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+@media (max-width: 800px) {
+    .calculator-response-user-info{
+        gap: 30px;
+    }
+
+    .calculator-response-columns{
+        gap: 30px;
+    }
+
+    .calculator-data-form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .calculator-submit{
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .calculator-response-columns{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .calculator-response-inner{
+        padding: 30px;
+    }
+
+    .calculator-response-periods-of-life-item-periods{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .calculator-response-periods-of-life-item-num-1{
+        font-size: 14px;
+    }
+
+    .calculator-response-periods-of-life-item-num-1{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .calculator-response-columns-2{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .calculator-data-form{
+        gap: 10px;
+    }
+
+    .calculator-date-label{
+        gap: 10px;
+    }
+
+    .calculator__inner{
+        padding: 15px;
+    }
+
+    .calculator-response-user-info{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .calculator-response-inner{
+        padding: 15px;
+    }
+
+    .calculator-response-periods-of-life-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+@media (max-width: 460px) {
+
+    .calculator-data-form{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .calculator-submit{
+        padding: 15px;
+    }
+
+    .calculator-response-chacroanalysis{
+       padding: 10px;
+    }
+    .calculator-response-chacroanalysis-item-img{
+        width: 30px;
+    }
+
+    .calculator-response-chacroanalysis-item {
+        padding: 0 20px 0 10px;
+    }
+
+    .calculator-response-user-info-age {
+        padding: 8px;
+        background-color: var(--ivory);
+        border-radius: 7px;
+        color: white;
+    }
+    .calculator-response-user-info-date-birth {
+        padding: 7px;
+        background-color: var(--ivory);
+        border-radius: 7px;
+        color: white;
+    }
+
+    .calculator-response-title{
+        margin-bottom: 15px;
+    }
+
+    .calculator-response-contour-of-specialness{
+        padding: 10px;
+    }
+
+    .calculator-response-contour-of-specialness-item-title{
+        font-size: 15px;
+    }
+
+    .calculator-response-columns {
+        gap: 15px;
+    }
+    .calculator-response-contour-of-specialness-item{
+        font-size: 14px;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .calculator-response-typology-of-specialness{
+        padding: 15px;
+    }
+
+    .calculator-response-typology-of-specialness-title{
+
+    }
+    .calculator-response-typology-of-specialness {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .calculator-response-womans-and-mans-cob{
+        padding: 15px;
+    }
+
+    .calculator-response-contour-of-specialness{
+        margin-bottom: 15px;
+    }
+    .calculator-response-typology-of-specialness-descr{
+        font-size: 14px;
+    }
+
+    .calculator-response-womans-and-mans-cob{
+        margin-bottom: 15px;
+    }
+
+    .calculator-response-womans-and-mans-cob{
+       font-size: 15px;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+    .calculator-response-columns{
+        margin-bottom: 15px;
+    }
+
+    .calculator-response-the-power-of-energy{
+        padding: 10px;
+    }
+
+    .calculator-response-columns-2{
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .calculator-response-the-power-of-energy-container{
+        font-size: 14px;
+    }
+    .calculator-response-emotional-type{
+        padding: 10px;
+    }
+    .calculator-response-emotional-type-descr{
+        margin-bottom: 5px;
+    }
+
+    .calculator-response-emotional-types{
+        font-size: 14px;
+    }
+
+    .calculator-response-periods-of-life{
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+    }
+
+
+
+
+
+    
+}
+
+
+

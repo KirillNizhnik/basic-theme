@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --beige: #CBB69D;
+    --white: #FFF;
+    --brown: #633A1C;
+    --background-color: rgba(255, 255, 255, 0.2);
+    --ivory: #C2A888;
+
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F2DED3;
+    color: var(--brown);
+    margin: 0;
+    padding: 0;
+}
+
+
+::selection {
+}
+
+
+img {
+    display: block;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    display: block;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--brown);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+
+.container {
+    /*padding: 0 10px;*/
+    margin: auto;
+    /*width: 100%;*/
+    position: relative;
+    z-index: 1;
+    max-width: 1420px;
+}
+
+
+
+@media (max-width: 1420px) {
+    .container {
+        width: 95%
+    }
+
+    .title {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 92%
+    }
+
+    .title {
+        font-size: 28px;
+    }
+}
