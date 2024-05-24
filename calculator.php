@@ -183,13 +183,13 @@ get_header()
                         </div>
                     </div>
                     <div class="sexual-potential">
-                        Показник енергетичний потенціал
+                         Енергетичний потенціал
                         <span>875</span>
                     </div>
                 </div>
                 <div class="calculator-response-emotional-type">
                     <h3 class="calculator-response-emotional-type-title">
-                        Емоціональний тип:
+                        Емоціональний тип
                     </h3>
                     <div class="calculator-response-emotional-type-descr">
                         Енергійний
