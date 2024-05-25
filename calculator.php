@@ -170,6 +170,23 @@ get_header()
                 </div>
             </div>
             <div class="calculator-response-columns-2">
+                <div class="calculator-response-emotional-type">
+                    <h3 class="calculator-response-emotional-type-title">
+                        Емоціональний тип
+                    </h3>
+                    <div class="calculator-response-emotional-type-descr">
+                        Енергійний
+                    </div>
+                    <div class="calculator-response-emotional-type-container">
+                        <div class="calculator-response-emotional-type-1 calculator-response-emotional-types">
+                            Я: 48
+                        </div>
+                        <div class="calculator-response-emotional-type-2 calculator-response-emotional-types">
+                            Ми: 39,6
+                        </div>
+                    </div>
+                </div>
+
                 <div class="calculator-response-the-power-of-energy">
                     <h3 class="calculator-response-the-power-of-energy-title">
                         Сила енергетики
@@ -187,24 +204,9 @@ get_header()
                         <span>875</span>
                     </div>
                 </div>
+
                 <div class="calculator-response-emotional-type">
-                    <h3 class="calculator-response-emotional-type-title">
-                        Емоціональний тип
-                    </h3>
-                    <div class="calculator-response-emotional-type-descr">
-                        Енергійний
-                    </div>
-                    <div class="calculator-response-emotional-type-container">
-                        <div class="calculator-response-emotional-type-1 calculator-response-emotional-types">
-                            Я: 48
-                        </div>
-                        <div class="calculator-response-emotional-type-2 calculator-response-emotional-types">
-                            Ми: 39,6
-                        </div>
-                    </div>
-                </div>
-                <div class="calculator-response-emotional-type">
-                    <div class="calculator-response-emotional-type-container">
+                    <div class="calculator-response-emotional-type-container new-con">
                         <div class="calculator-response-emotional-type-1 calculator-response-emotional-types">
                             Iнтуїція: 48
                         </div>
@@ -215,7 +217,11 @@ get_header()
                 </div>
             </div>
             <div class="last-position">
+
                 <ul class="live-tasks">
+                    <h3 class="">
+                        Задачи
+                    </h3>
                     <li class="live-task">
                         <div class="live-task-name">
                             Родова
@@ -250,40 +256,7 @@ get_header()
                     </li>
 
                 </ul>
-                    <ul class="live-tasks">
-                        <li class="live-task">
-                            <div class="live-task-name">
-                                Потенціал душі
-                            </div>
-                            <div class="live-task-descr">
-                                test
-                            </div>
-                        </li>
-                        <li class="live-task">
-                            <div class="live-task-name">
-                                Втілення душі
-                            </div>
-                            <div class="live-task-descr">
-                                test
-                            </div>
-                        </li>
-                        <li class="live-task">
-                            <div class="live-task-name">
-                                Фінкод
-                            </div>
-                            <div class="live-task-descr">
-                                test
-                            </div>
-                        </li>
-                        <li class="live-task">
-                            <div class="live-task-name">
-                                Прогноз
-                            </div>
-                            <div class="live-task-descr">
-                                test
-                            </div>
-                        </li>
-                    </ul>
+
             </div>
 
             <div class="calculator-response-periods-of-life">
@@ -355,6 +328,42 @@ get_header()
                         </div>
                         <div class="calculator-response-periods-of-life-item-num-2">
                             8
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="last-position live-position-1">
+                <ul class="live-tasks">
+                    <li class="live-task">
+                        <div class="live-task-name">
+                            Потенціал душі
+                        </div>
+                        <div class="live-task-descr">
+                            test
+                        </div>
+                    </li>
+                    <li class="live-task">
+                        <div class="live-task-name">
+                            Втілення душі
+                        </div>
+                        <div class="live-task-descr">
+                            test
+                        </div>
+                    </li>
+                    <li class="live-task">
+                        <div class="live-task-name">
+                            Фінкод
+                        </div>
+                        <div class="live-task-descr">
+                            test
+                        </div>
+                    </li>
+                    <li class="live-task">
+                        <div class="live-task-name">
+                            Прогноз
+                        </div>
+                        <div class="live-task-descr">
+                            test
                         </div>
                     </li>
                 </ul>

@@ -194,10 +194,7 @@
     margin-bottom: 30px;
 }
 
-.calculator-response-typology-of-specialness-descr::before {
-    content: "●";
-    margin-right: 0.5em;
-}
+
 
 .calculator-response-typology-of-specialness-title{
 
@@ -205,7 +202,7 @@
 
 .calculator-response-typology-of-specialness-descr{
     margin-left: 20px;
-    font-style: italic;
+    font-style: normal;
 }
 
 .calculator-response-womans-and-mans-cob{
@@ -374,6 +371,10 @@
     gap: 30px;
 }
 
+.live-position-1{
+    margin-top: 30px;
+}
+
 
 @media (max-width: 800px) {
     .calculator-response-user-info{
@@ -434,6 +435,14 @@
         width: 100%;
     }
 
+    .last-position{
+        margin-bottom: 15px;
+    }
+
+    .live-position-1{
+        margin-top: 15px;
+    }
+
 }
 
 @media (max-width: 550px) {
@@ -461,6 +470,11 @@
     .calculator-response-periods-of-life-list{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .new-con{
+        flex-direction: row;
+        justify-content: space-between;
     }
 
 
@@ -587,6 +601,13 @@
         margin: 0;
         width: 100%;
     }
+
+    .new-con{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
 
 
 
