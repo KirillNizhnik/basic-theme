@@ -290,10 +290,7 @@
     margin-bottom: 20px;
 }
 
-.calculator-response-emotional-type-descr::before {
-    content: "●";
-    margin-right: 0.5em;
-}
+
 
 .calculator-response-emotional-type-container{
     display: flex;
