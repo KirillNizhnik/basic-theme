@@ -269,7 +269,7 @@ get_header()
                         </li>
                         <li class="live-task">
                             <div class="live-task-name">
-                                Фін код
+                                Фінкод
                             </div>
                             <div class="live-task-descr">
                                 test
