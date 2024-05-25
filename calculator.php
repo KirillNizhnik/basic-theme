@@ -150,7 +150,7 @@ get_header()
                     </div>
                     <div class="calculator-response-typology-of-specialness">
                         <div class="calculator-response-typology-of-specialness-descr">
-                            3-а типологія
+                            3 типологія
                         </div>
 
                     </div>
@@ -220,7 +220,7 @@ get_header()
 
                 <ul class="live-tasks">
                     <h3 class="">
-                        Задачи
+                        Задачі
                     </h3>
                     <li class="live-task">
                         <div class="live-task-name">
