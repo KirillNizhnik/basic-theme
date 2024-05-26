@@ -423,12 +423,12 @@ function calculate ($day, $month, $year, $handedness){
                                     <tbody>
                                         <tr>
                                             <td>' . $year .  '</td>
-                                            <td>' . $year + 1 .  '</td>
-                                            <td>' . $year + 2 .  '</td>
-                                            <td>' . $year + 3 .  '</td>
-                                            <td>' . $year + 4 .  '</td>
-                                            <td>' . $year + 5 .  '</td>
-                                            <td>' . $year + 6 .  '</td>
+                                            <td>' . (int)($year) + 1 .  '</td>
+                                            <td>' . (int)($year) + 2 .  '</td>
+                                            <td>' . (int)($year) + 3 .  '</td>
+                                            <td>' . (int)($year) + 4 .  '</td>
+                                            <td>' . (int)($year) + 5 .  '</td>
+                                            <td>' . (int)($year) + 6 .  '</td>
                                         </tr>
                                         <tr>
                                             <td>' . $year + 7 .  '</td>
