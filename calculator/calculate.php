@@ -548,20 +548,37 @@ function calculateCodeAndTask($day, $month, $year, $typology): array{
     $split = str_split($sum_first_and_last);
     $sum_first_and_last = array_sum($split);
     $two_number_code = $typology + $sum_first_and_last;
+    while ($two_number_code > 9){
+        $two_number_code = str_split($two_number_code);
+        $two_number_code = array_sum($two_number_code);
+    }
     $present_task = $sum_first_and_last . '/' . $two_number_code;
     //parent task
     $code = $sum_of_day_month_digits + $sum_first_and_last;
     $code = str_split($code);
     $parent_task= array_sum($code);
-    $parent_task = $parent_task . '/' . $parent_task + $typology;
+    while ($parent_task > 9){
+        $parent_task = str_split($parent_task);
+        $parent_task = array_sum($parent_task);
+    }
+    $parent_task1 = $parent_task + $typology;
+    while ($parent_task1 > 9){
+        $parent_task1 = str_split($parent_task1);
+        $parent_task1 = array_sum($parent_task1);
+    }
+    $parent_task = $parent_task . '/' . $parent_task1;
     //potential_soul
     $last_element = end($code1);
     $potential_soul_1 = $sum_first_and_last + $last_element;
-    if ($potential_soul_1 > 9){
+    while ($potential_soul_1 > 9){
         $potential_soul_1 = str_split($potential_soul_1);
         $potential_soul_1 = array_sum($potential_soul_1);
     }
     $potential_soul_2 = $potential_soul_1 + $typology;
+    while ($potential_soul_2 > 9){
+        $potential_soul_2 = str_split($potential_soul_2);
+        $potential_soul_2 = array_sum($potential_soul_2);
+    }
     $potential_soul = $potential_soul_1 . "/" . $potential_soul_2;
     //embodiment soul
     $embodiment_soul = ($day . $month . $year);
@@ -588,6 +605,15 @@ function calculate_generic_carma($sum_of_day_month_digits, $multiply_split, $typ
         }
         $array[] = $num;
     }
+    while ($multiply_split[0] > 9){
+        $multiply_split[0] = str_split($multiply_split[0]);
+        $multiply_split[0] = array_sum($multiply_split[0]);
+    }
+    while ($multiply_split[1] > 9){
+        $multiply_split[1] = str_split($multiply_split[1]);
+        $multiply_split[1] = array_sum($multiply_split[1]);
+    }
+
     $generic_task = $multiply_split[0]  . '/' . $array[0];
     $carma_task = $multiply_split[1]  . '/' . $array[1];
 
