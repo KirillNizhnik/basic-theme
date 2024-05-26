@@ -422,72 +422,71 @@ function calculate ($day, $month, $year, $handedness){
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>' . $year .  '</td>
-                                            <td>' . (int)($year) + 1 .  '</td>
-                                            <td>' . (int)($year) + 2 .  '</td>
-                                            <td>' . (int)($year) + 3 .  '</td>
-                                            <td>' . (int)($year) + 4 .  '</td>
-                                            <td>' . (int)($year) + 5 .  '</td>
-                                            <td>' . (int)($year) + 6 .  '</td>
-                                        </tr>
-                                        <tr>
-                                            <td>' . $year + 7 .  '</td>
-                                            <td>' . $year + 8 .  '</td>
-                                            <td>' . $year + 9 .  '</td>
-                                            <td>' . $year + 10 .  '</td>
-                                            <td>' . $year + 11 .  '</td>
-                                            <td>' . $year + 12 .  '</td>
-                                            <td>' . $year + 13 .  '</td>
-                                        </tr>
-                                        <tr>
-                                            <td>' . $year + 14 .  '</td>
-                                            <td>' . $year + 15 .  '</td>
-                                            <td>' . $year + 16 .  '</td>
-                                            <td>' . $year + 17 .  '</td>
-                                            <td>' . $year + 18 .  '</td>
-                                            <td>' . $year + 19 .  '</td>
-                                            <td>' . $year + 20 .  '</td>
-                                        </tr>
-                                        <tr>
-                                             <td>' . $year + 21 .  '</td>
-                                            <td>' . $year + 22 .  '</td>
-                                            <td>' . $year + 23 .  '</td>
-                                            <td>' . $year + 24 .  '</td>
-                                            <td>' . $year + 25 .  '</td>
-                                            <td>' . $year + 26 .  '</td>
-                                            <td>' . $year + 27 .  '</td>
-                                        </tr>
-                                        <tr>
-                                            <td>' . $year + 28 .  '</td>
-                                            <td>' . $year + 29 .  '</td>
-                                            <td>' . $year + 30 .  '</td>
-                                            <td>' . $year + 31 .  '</td>
-                                            <td>' . $year + 32 .  '</td>
-                                            <td>' . $year + 33 .  '</td>
-                                            <td>' . $year + 34 .  '</td>
-                                        </tr>
-                                         <tr>
-                                            <td>' . $year + 35 .  '</td>
-                                            <td>' . $year + 36 .  '</td>
-                                            <td>' . $year + 37 .  '</td>
-                                            <td>' . $year + 38 .  '</td>
-                                            <td>' . $year + 39 .  '</td>
-                                            <td>' . $year + 40 .  '</td>
-                                            <td>' . $year + 41 .  '</td>
-                                        </tr>
-                                         <tr>
-                                            <td>' . $year + 42 .  '</td>
-                                            <td>' . $year + 43 .  '</td>
-                                            <td>' . $year + 44 .  '</td>
-                                            <td>' . $year + 45 .  '</td>
-                                            <td>' . $year + 46 .  '</td>
-                                            <td>' . $year + 47 .  '</td>
-                                            <td>' . $year + 48 .  '</td>
-                                        </tr>
-                                         <tr>
-                                            <td>' . $year + 49 .  '</td>
-                                         
-                                        </tr>
+        <td>' . intval($year) .  '</td>
+        <td>' . (intval($year) + 1) .  '</td>
+        <td>' . (intval($year) + 2) .  '</td>
+        <td>' . (intval($year) + 3) .  '</td>
+        <td>' . (intval($year) + 4) .  '</td>
+        <td>' . (intval($year) + 5) .  '</td>
+        <td>' . (intval($year) + 6) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 7) .  '</td>
+        <td>' . (intval($year) + 8) .  '</td>
+        <td>' . (intval($year) + 9) .  '</td>
+        <td>' . (intval($year) + 10) .  '</td>
+        <td>' . (intval($year) + 11) .  '</td>
+        <td>' . (intval($year) + 12) .  '</td>
+        <td>' . (intval($year) + 13) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 14) .  '</td>
+        <td>' . (intval($year) + 15) .  '</td>
+        <td>' . (intval($year) + 16) .  '</td>
+        <td>' . (intval($year) + 17) .  '</td>
+        <td>' . (intval($year) + 18) .  '</td>
+        <td>' . (intval($year) + 19) .  '</td>
+        <td>' . (intval($year) + 20) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 21) .  '</td>
+        <td>' . (intval($year) + 22) .  '</td>
+        <td>' . (intval($year) + 23) .  '</td>
+        <td>' . (intval($year) + 24) .  '</td>
+        <td>' . (intval($year) + 25) .  '</td>
+        <td>' . (intval($year) + 26) .  '</td>
+        <td>' . (intval($year) + 27) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 28) .  '</td>
+        <td>' . (intval($year) + 29) .  '</td>
+        <td>' . (intval($year) + 30) .  '</td>
+        <td>' . (intval($year) + 31) .  '</td>
+        <td>' . (intval($year) + 32) .  '</td>
+        <td>' . (intval($year) + 33) .  '</td>
+        <td>' . (intval($year) + 34) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 35) .  '</td>
+        <td>' . (intval($year) + 36) .  '</td>
+        <td>' . (intval($year) + 37) .  '</td>
+        <td>' . (intval($year) + 38) .  '</td>
+        <td>' . (intval($year) + 39) .  '</td>
+        <td>' . (intval($year) + 40) .  '</td>
+        <td>' . (intval($year) + 41) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 42) .  '</td>
+        <td>' . (intval($year) + 43) .  '</td>
+        <td>' . (intval($year) + 44) .  '</td>
+        <td>' . (intval($year) + 45) .  '</td>
+        <td>' . (intval($year) + 46) .  '</td>
+        <td>' . (intval($year) + 47) .  '</td>
+        <td>' . (intval($year) + 48) .  '</td>
+    </tr>
+    <tr>
+        <td>' . (intval($year) + 49) .  '</td>
+    </tr>
                                     </tbody>
                                 </table>
                             </div>
