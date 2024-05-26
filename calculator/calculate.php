@@ -30,6 +30,7 @@ function calculate ($day, $month, $year, $handedness){
     $array1Table3 = get_physical_data($baseNumsPlus1);
     $array2Table3 = get_em_data($baseNumsPlus2);
     $array3Table3 = get_in_data($baseNumsPlus3);
+//    dd($array1Table3);
     $stringNums1 = $array1Table3[0];
     $stringNums2 = $array2Table3[0];
     $stringNums3 = $array3Table3[0];
@@ -74,9 +75,348 @@ function calculate ($day, $month, $year, $handedness){
     $typology = calculateDateValue($day, $month, $year);
 
     //code
-    $code = calculateCodeAndTypology($day, $month, $year, $typology);
-    dd($code);
-    return $react_type;
+    $code = calculateCodeAndTask($day, $month, $year, $typology);
+    //fin code
+    $fin_code = $muladhara * $manipura;
+    $code1 = $code['code1'];
+    $code2 = $code['code2'];
+    $html = '<section class="calculator-response" id="calculator-response">
+        <div class="container">
+            <div class="calculator-response-inner" id="response">
+                <div class="calculator-response-user-info">
+                    <div class="calculator-response-user-info-date-birth">
+                        Дата нарождения: ' . $day . '-' . $month . '-' . $year . '
+                    </div>
+                    <div class="calculator-response-user-info-age">
+                        Вік: ' . (date('Y') - $year) . '
+                    </div>
+                </div>
+                <div class="calculator-response-columns">
+                    <div class="calculator-response-chacroanalysis">
+                        <h3 class="calculator-response-chacroanalysis-title">
+                            Чакроаналіз
+                        </h3>
+                        <ul class="calculator-response-chacroanalysis-list">
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/1.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Сахасрара
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $sahasrara . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/2.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Aджна
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $ajna . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/3.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Вішудха
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $vishudha . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/4.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Анахата
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $anahata . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/5.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Маніпура
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $manipura . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/6.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Свадхістана
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $svadhistana . '%
+                                </div>
+                            </li>
+                            <li class="calculator-response-chacroanalysis-item">
+                                <img src="' . get_template_directory_uri() . '/assets/images/7.png" alt=""
+                                     class="calculator-response-chacroanalysis-item-img">
+                                <div class="calculator-response-chacroanalysis-item-text">
+                                    Муладхара
+                                </div>
+                                <div class="calculator-response-chacroanalysis-item-percent">
+                                    ' . $muladhara . '%
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="calculator-response-two-columns">
+                        <div class="calculator-response-contour-of-specialness">
+                            <h3 class="calculator-response-contour-of-specialness-title">Контури</h3>
+                            <ul class="calculator-response-contour-of-specialness-list">
+                                <li class="calculator-response-contour-of-specialness-item">
+                                    <div class="calculator-response-contour-of-specialness-item-title">
+                                        Темперамент:
+                                    </div>
+                                    <div class="calculator-response-contour-of-specialness-item-descr">
+                                        ' .  $array1Table3[1]  . '
+                                    </div>
+                                </li>
+                                <li class="calculator-response-contour-of-specialness-item">
+                                    <div class="calculator-response-contour-of-specialness-item-title">
+                                        Характер:
+                                    </div>
+                                    <div class="calculator-response-contour-of-specialness-item-descr">
+                                        ' .  $array2Table3[1]  . '
+                                    </div>
+                                </li>
+                                <li class="calculator-response-contour-of-specialness-item">
+                                    <div class="calculator-response-contour-of-specialness-item-title">
+                                        Інтелект:
+                                    </div>
+                                    <div class="calculator-response-contour-of-specialness-item-descr">
+                                        ' .  $array3Table3[1]  . '
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="calculator-response-typology-of-specialness">
+                            <div class="calculator-response-typology-of-specialness-descr">
+                                ' . $typology . ' типологія
+                            </div>
+                        </div>
+                        <div class="calculator-response-womans-and-mans-cob">
+                            <h3 class="calculator-response-womans-and-mans-title">
+                                Жіноча та чоловіча енергія
+                            </h3>
+                            <div class="calculator-response-womans-and-mans-cob-con">
+                                <div class="calculator-response-womans-and-mans-cob-in">
+                                    Інь: ' . $yin . '
+                                </div>
+                                <div class="calculator-response-womans-and-mans-cob-an">
+                                    Ян: ' . $yang . '
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-response-columns-2">
+                    <div class="calculator-response-emotional-type">
+                        <h3 class="calculator-response-emotional-type-title">
+                            Емоціональний тип
+                        </h3>
+                        <div class="calculator-response-emotional-type-descr">
+                            ' . $react_type["Эмоциональный тип реактивности"] . '
+                        </div>
+                        <div class="calculator-response-emotional-type-container">
+                            <div class="calculator-response-emotional-type-1 calculator-response-emotional-types">
+                                Я: ' . $react_type["Я"] . '
+
+                            </div>
+                            <div class="calculator-response-emotional-type-2 calculator-response-emotional-types">
+                                Ми: ' . $react_type["Мы"] . '
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-response-the-power-of-energy">
+                        <h3 class="calculator-response-the-power-of-energy-title">
+                            Сила енергетики
+                        </h3>
+                        <div class="calculator-response-the-power-of-energy-container">
+                            <div class="calculator-response-the-power-of-energy-container-want">
+                                Хочу <span>' . $want . '</span>
+                            </div>
+                            <div class="calculator-response-the-power-of-energy-container-i-can">
+                                Можу <span>' . $i_can . '</span>
+                            </div>
+                        </div>
+                        <div class="sexual-potential">
+                            Енергетичний потенціал
+                            <span>' . $energy_potential . '</span>
+                        </div>
+                    </div>
+                    <div class="calculator-response-emotional-type">
+                        <div class="calculator-response-emotional-type-container new-con">
+                            <div class="calculator-response-emotional-type-1 calculator-response-emotional-types">
+                                Iнтуїція: ' . $intuition . '
+                            </div>
+                            <div class="calculator-response-emotional-type-2 calculator-response-emotional-types">
+                                Логіка: ' . $logic . '
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-position">
+                    <ul class="live-tasks">
+                        <h3 class="">
+                            Задачі
+                        </h3>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Родова
+                            </div>
+                            <div class="live-task-descr">
+                                 ' . $code['generic-task'] . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Карма минулого
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $code['carma-task'] . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Теперішня
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $code['present-task'] . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Батьківська
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $code['parent-task'] . '
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="calculator-response-periods-of-life">
+                    <h3 class="calculator-response-periods-of-life-title">
+                        Періоди життя
+                    </h3>
+                    <ul class="calculator-response-periods-of-life-list">
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                до 12 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[2] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[2] . '
+                            </div>
+                        </li>
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                12-24 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[3] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[3] . '
+                            </div>
+                        </li>
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                24-36 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[4] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[4] . '
+                            </div>
+                        </li>
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                36-48 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[5] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[5] . '
+                            </div>
+                        </li>
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                48-60 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[6] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[6] . '
+                            </div>
+                        </li>
+                        <li class="calculator-response-periods-of-life-item">
+                            <div class="calculator-response-periods-of-life-item-periods">
+                                більше 60 років
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-1">
+                                ' . $code1[7] . '
+                            </div>
+                            <div class="calculator-response-periods-of-life-item-num-2">
+                                ' . $code2[7] . '
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="last-position live-position-1">
+                    <ul class="live-tasks">
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Потенціал душі
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $code['potential-soul'] . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Втілення душі
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $code['embodiment-soul'] . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Фінкод
+                            </div>
+                            <div class="live-task-descr">
+                                ' . $fin_code . '
+                            </div>
+                        </li>
+                        <li class="live-task">
+                            <div class="live-task-name">
+                                Прогноз
+                            </div>
+                            <div class="live-task-descr">
+                                test
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>';
+    return $html;
 }
 
 function  get_want($yin, $yang){
@@ -88,7 +428,8 @@ function  get_want($yin, $yang){
 }
 
 
-function calculateDateValue($day, $month, $year) {
+function calculateDateValue($day, $month, $year): int
+{
     $date = strval($day) . strval($month) . strval($year);
 
     $sum = 0;
@@ -108,25 +449,92 @@ function calculateDateValue($day, $month, $year) {
     return $sum;
 }
 
-function calculateCodeAndTypology($day, $month, $year, $typology) {
-    $step1 = $day * $month * $year;
+function calculateCodeAndTask($day, $month, $year, $typology): array{
+    $day_month = (int)($day . $month);
+    $multiply = $day_month * $year;
+    $sum_of_day_month_digits = sum_of_year_digits($day_month);
+    $multiply_split = str_split($multiply);
+    $generic_carma = calculate_generic_carma($sum_of_day_month_digits, $multiply_split, $typology);
+    //generic task
+    $generic_task = $generic_carma['generic_task'];
+    //carma task
+    $carma_task = $generic_carma['carma_task'];
+    //codes
+    $code1 = $generic_carma['code1'];
+    $code2 = $generic_carma['code2'];
+    //present task
+    $first_and_lust = get_first_and_last_digit($multiply);
+    $sum_first_and_last = array_sum($first_and_lust);
+    $split = str_split($sum_first_and_last);
+    $sum_first_and_last = array_sum($split);
+    $two_number_code = $typology + $sum_first_and_last;
+    $present_task = $sum_first_and_last . '/' . $two_number_code;
+    //parent task
+    $code = $sum_of_day_month_digits + $sum_first_and_last;
+    $code = str_split($code);
+    $parent_task= array_sum($code);
+    $parent_task = $parent_task . '/' . $parent_task + $typology;
+    //potential_soul
+    $last_element = end($code1);
+    $potential_soul_1 = $sum_first_and_last + $last_element;
+    if ($potential_soul_1 > 9){
+        $potential_soul_1 = str_split($potential_soul_1);
+        $potential_soul_1 = array_sum($potential_soul_1);
+    }
+    $potential_soul_2 = $potential_soul_1 + $typology;
+    $potential_soul = $potential_soul_1 . "/" . $potential_soul_2;
+    //embodiment soul
+    $embodiment_soul = ($day . $month . $year);
+    $embodiment_soul = str_split($embodiment_soul);
+    $embodiment_soul = array_sum($embodiment_soul);
 
-    $step2 = $day + $month;
-
-    $step3 = $step2 + $typology; // Добавляем 4 к каждому числу
-
-    $step3_day = adjustToSingleDigit($day + $typology);
-    $step3_month = adjustToSingleDigit($month + $typology);
-    $step3_year = adjustToSingleDigit($year + $typology);
-
-    $period_code = $step3_day . "/" . $step3_month . "/" . $step3_year;
-
-    $typology = adjustToSingleDigit($step3);
-
-    return array('period_code' => $period_code, 'typology' => $typology);
+    return ['present-task' => $present_task, 'parent-task' => $parent_task,
+        'generic-task' => $generic_task,
+        'carma-task'=>$carma_task, 'potential-soul' => $potential_soul,
+        'embodiment-soul' => $embodiment_soul, 'code1' => $code1, 'code2' => $code2];
 }
 
-function adjustToSingleDigit($number) {
+
+function calculate_generic_carma($sum_of_day_month_digits, $multiply_split, $typology) : array
+{
+    array_unshift($multiply_split, $sum_of_day_month_digits);
+    $array = null;
+    foreach ($multiply_split as $number){
+        $num = $number + $typology;
+        if ($num>9){
+            $num = str_split($num);
+            $num = array_sum($num);
+
+        }
+        $array[] = $num;
+    }
+    $generic_task = $multiply_split[0]  . '/' . $array[0];
+    $carma_task = $multiply_split[1]  . '/' . $array[1];
+
+    return ["generic_task" => $generic_task, "carma_task" => $carma_task, "code1" => $multiply_split, "code2" => $array];
+}
+
+function sum_of_year_digits($num) : int {
+    $digits = str_split($num);
+    return array_sum($digits);
+}
+
+
+function get_first_and_last_digit($number) : array {
+    $number_str = (string)$number;
+    $first_digit = $number_str[0];
+    $last_digit = $number_str[strlen($number_str) - 1];
+    return [$first_digit, $last_digit];
+}
+
+function get_first_digit($number) : array {
+    $number_str = (string)$number;
+    $first_digit = $number_str[0];
+    $last_digit = $number_str[strlen($number_str) - 1];
+    return [$first_digit, $last_digit];
+}
+function adjustToSingleDigit($number): int
+{
     $numberStr = strval($number);
     $sum = 0;
     for ($i = 0; $i < strlen($numberStr); $i++) {

@@ -77,6 +77,16 @@ jQuery(document).ready(function ($) {
             success: function (response) {
                 if (response.success) {
                     console.log("class");
+                    let calculatorResponse = document.getElementById('calculator-response')
+                    if (calculatorResponse) {
+                        calculatorResponse.remove();
+                    }
+
+                    let calculatorTitle = document.getElementById('calculator-head');
+                    if (calculatorTitle) {
+                        console.log(response.data)
+                        calculatorTitle.insertAdjacentHTML('afterend', response.data);
+                    }
                 } else {
                     console.log("bad");
                 }
