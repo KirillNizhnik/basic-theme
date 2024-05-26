@@ -210,10 +210,10 @@ function calculate ($day, $month, $year, $handedness){
                             </h3>
                             <div class="calculator-response-womans-and-mans-cob-con">
                                 <div class="calculator-response-womans-and-mans-cob-in">
-                                    Інь: ' . $yin . '
+                                    Інь: ' . $yang . '
                                 </div>
                                 <div class="calculator-response-womans-and-mans-cob-an">
-                                    Ян: ' . $yang . '
+                                    Ян: ' . $yin . '
                                 </div>
                             </div>
                         </div>
