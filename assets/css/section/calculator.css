@@ -604,6 +604,15 @@
         justify-content: space-between;
     }
 
+    .live-tasks{
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .live-task-descr table{
+        width: 100%;
+        font-size: 14px;
+    }
 
 
 

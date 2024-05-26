@@ -18,13 +18,13 @@ function calculate ($day, $month, $year, $handedness){
     global $STATIC_MOON;
     global $STATIC_GROUND;
     global $STATIC_SUN;
-    if ($baseNumsPlus1 > $STATIC_MOON){
-        $baseNumsPlus1 = $baseNumsPlus1-$STATIC_MOON;
+    while($baseNumsPlus1 > $STATIC_MOON) {
+            $baseNumsPlus1 = $baseNumsPlus1 - $STATIC_MOON;
     }
-    if ($baseNumsPlus2 > $STATIC_GROUND){
+    while($baseNumsPlus2 > $STATIC_GROUND){
         $baseNumsPlus2 = $baseNumsPlus2-$STATIC_GROUND;
     }
-    if ($baseNumsPlus3 > $STATIC_SUN){
+    while ($baseNumsPlus3 > $STATIC_SUN){
         $baseNumsPlus3 = $baseNumsPlus3-$STATIC_SUN;
     }
     $array1Table3 = get_physical_data($baseNumsPlus1);
@@ -178,7 +178,7 @@ function calculate ($day, $month, $year, $handedness){
                                         Темперамент:
                                     </div>
                                     <div class="calculator-response-contour-of-specialness-item-descr">
-                                        ' .  $array1Table3[1]  . '
+                                        ' . $array1Table3[1] . '
                                     </div>
                                 </li>
                                 <li class="calculator-response-contour-of-specialness-item">
@@ -186,7 +186,7 @@ function calculate ($day, $month, $year, $handedness){
                                         Характер:
                                     </div>
                                     <div class="calculator-response-contour-of-specialness-item-descr">
-                                        ' .  $array2Table3[1]  . '
+                                        ' . $array2Table3[1] . '
                                     </div>
                                 </li>
                                 <li class="calculator-response-contour-of-specialness-item">
@@ -194,7 +194,7 @@ function calculate ($day, $month, $year, $handedness){
                                         Інтелект:
                                     </div>
                                     <div class="calculator-response-contour-of-specialness-item-descr">
-                                        ' .  $array3Table3[1]  . '
+                                        ' . $array3Table3[1] . '
                                     </div>
                                 </li>
                             </ul>
@@ -408,7 +408,88 @@ function calculate ($day, $month, $year, $handedness){
                                 Прогноз
                             </div>
                             <div class="live-task-descr">
-                                test
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>' .  $code1[1] . '/' . $code2[1] . '</th>
+                                            <th>' .  $code1[2] . '/' . $code2[2] . '</th>
+                                            <th>' .  $code1[3] . '/' . $code2[3] . '</th>
+                                            <th>' .  $code1[4] . '/' . $code2[4] . '</th>
+                                            <th>' .  $code1[5] . '/' . $code2[5] . '</th>
+                                            <th>' .  $code1[6] . '/' . $code2[6] . '</th>
+                                            <th>' .  $code1[7] . '/' . $code2[7] . '</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>' . $year .  '</td>
+                                            <td>' . $year + 1 .  '</td>
+                                            <td>' . $year + 2 .  '</td>
+                                            <td>' . $year + 3 .  '</td>
+                                            <td>' . $year + 4 .  '</td>
+                                            <td>' . $year + 5 .  '</td>
+                                            <td>' . $year + 6 .  '</td>
+                                        </tr>
+                                        <tr>
+                                            <td>' . $year + 7 .  '</td>
+                                            <td>' . $year + 8 .  '</td>
+                                            <td>' . $year + 9 .  '</td>
+                                            <td>' . $year + 10 .  '</td>
+                                            <td>' . $year + 11 .  '</td>
+                                            <td>' . $year + 12 .  '</td>
+                                            <td>' . $year + 13 .  '</td>
+                                        </tr>
+                                        <tr>
+                                            <td>' . $year + 14 .  '</td>
+                                            <td>' . $year + 15 .  '</td>
+                                            <td>' . $year + 16 .  '</td>
+                                            <td>' . $year + 17 .  '</td>
+                                            <td>' . $year + 18 .  '</td>
+                                            <td>' . $year + 19 .  '</td>
+                                            <td>' . $year + 20 .  '</td>
+                                        </tr>
+                                        <tr>
+                                             <td>' . $year + 21 .  '</td>
+                                            <td>' . $year + 22 .  '</td>
+                                            <td>' . $year + 23 .  '</td>
+                                            <td>' . $year + 24 .  '</td>
+                                            <td>' . $year + 25 .  '</td>
+                                            <td>' . $year + 26 .  '</td>
+                                            <td>' . $year + 27 .  '</td>
+                                        </tr>
+                                        <tr>
+                                            <td>' . $year + 28 .  '</td>
+                                            <td>' . $year + 29 .  '</td>
+                                            <td>' . $year + 30 .  '</td>
+                                            <td>' . $year + 31 .  '</td>
+                                            <td>' . $year + 32 .  '</td>
+                                            <td>' . $year + 33 .  '</td>
+                                            <td>' . $year + 34 .  '</td>
+                                        </tr>
+                                         <tr>
+                                            <td>' . $year + 35 .  '</td>
+                                            <td>' . $year + 36 .  '</td>
+                                            <td>' . $year + 37 .  '</td>
+                                            <td>' . $year + 38 .  '</td>
+                                            <td>' . $year + 39 .  '</td>
+                                            <td>' . $year + 40 .  '</td>
+                                            <td>' . $year + 41 .  '</td>
+                                        </tr>
+                                         <tr>
+                                            <td>' . $year + 42 .  '</td>
+                                            <td>' . $year + 43 .  '</td>
+                                            <td>' . $year + 44 .  '</td>
+                                            <td>' . $year + 45 .  '</td>
+                                            <td>' . $year + 46 .  '</td>
+                                            <td>' . $year + 47 .  '</td>
+                                            <td>' . $year + 48 .  '</td>
+                                        </tr>
+                                         <tr>
+                                            <td>' . $year + 49 .  '</td>
+                                         
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </li>
                     </ul>
