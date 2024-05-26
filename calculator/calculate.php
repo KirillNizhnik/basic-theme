@@ -598,10 +598,9 @@ function calculate_generic_carma($sum_of_day_month_digits, $multiply_split, $typ
     $array = null;
     foreach ($multiply_split as $number){
         $num = $number + $typology;
-        if ($num>9){
+        while ($num>9){
             $num = str_split($num);
             $num = array_sum($num);
-
         }
         $array[] = $num;
     }
