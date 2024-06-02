@@ -85,7 +85,7 @@ function calculate ($day, $month, $year, $handedness){
             <div class="calculator-response-inner" id="response">
                 <div class="calculator-response-user-info">
                     <div class="calculator-response-user-info-date-birth">
-                        Дата нарождения: ' . $day . '-' . $month . '-' . $year . '
+                        Дата народження: ' . $day . '-' . $month . '-' . $year . '
                     </div>
                     <div class="calculator-response-user-info-age">
                         Вік: ' . (date('Y') - $year) . '
