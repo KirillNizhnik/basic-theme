@@ -5,9 +5,7 @@ $STATIC_GROUND = 28;
 $STATIC_SUN = 33;
 
 
-function checkHeader($header1, $header2) {
-    return (!empty($header1) && !empty($header2)) ? $header1 . '/' . $header2 : '-';
-}
+
 
 function calculate ($day, $month, $year, $handedness){
     $year_number_list = get_year_numbers($year);
@@ -30,6 +28,12 @@ function calculate ($day, $month, $year, $handedness){
     while ($baseNumsPlus3 > $STATIC_SUN){
         $baseNumsPlus3 = $baseNumsPlus3-$STATIC_SUN;
     }
+    if ($baseNumsPlus1 === 0){
+        $baseNumsPlus1 = $STATIC_MOON;}
+    if ($baseNumsPlus2 === 0){
+        $baseNumsPlus2 = $STATIC_GROUND;}
+    if ($baseNumsPlus3 === 0){
+        $baseNumsPlus3 = $STATIC_SUN;}
     $array1Table3 = get_physical_data($baseNumsPlus1);
     $array2Table3 = get_em_data($baseNumsPlus2);
     $array3Table3 = get_in_data($baseNumsPlus3);
@@ -87,6 +91,7 @@ function calculate ($day, $month, $year, $handedness){
     $num2e = isset($code2[7]) && $code2[7] !== '' ? $code2[7] : '-';
     $code1[7] = $num1e;
     $code2[7] = $num2e;
+    $table = generateTable($code1, $code2, $year);
  $html = '<section class="calculator-response" id="calculator-response">
         <div class="container">
             <div class="calculator-response-inner" id="response">
@@ -415,87 +420,7 @@ function calculate ($day, $month, $year, $handedness){
                                 Прогноз
                             </div>
                             <div class="live-task-descr">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>' .  $code1[1] . '/' . $code2[1] . '</th>
-                                            <th>' .  $code1[2] . '/' . $code2[2] . '</th>
-                                            <th>' .  $code1[3] . '/' . $code2[3] . '</th>
-                                            <th>' .  $code1[4] . '/' . $code2[4] . '</th>
-                                            <th>' .  $code1[5] . '/' . $code2[5] . '</th>
-                                            <th>' .  $code1[6] . '/' . $code2[6] . '</th>
-                                            <th>' .  $code1[7] . '/' . $code2[7] . '</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-        <td>' . intval($year) .  '</td>
-        <td>' . (intval($year) + 1) .  '</td>
-        <td>' . (intval($year) + 2) .  '</td>
-        <td>' . (intval($year) + 3) .  '</td>
-        <td>' . (intval($year) + 4) .  '</td>
-        <td>' . (intval($year) + 5) .  '</td>
-        <td>' . (intval($year) + 6) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 7) .  '</td>
-        <td>' . (intval($year) + 8) .  '</td>
-        <td>' . (intval($year) + 9) .  '</td>
-        <td>' . (intval($year) + 10) .  '</td>
-        <td>' . (intval($year) + 11) .  '</td>
-        <td>' . (intval($year) + 12) .  '</td>
-        <td>' . (intval($year) + 13) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 14) .  '</td>
-        <td>' . (intval($year) + 15) .  '</td>
-        <td>' . (intval($year) + 16) .  '</td>
-        <td>' . (intval($year) + 17) .  '</td>
-        <td>' . (intval($year) + 18) .  '</td>
-        <td>' . (intval($year) + 19) .  '</td>
-        <td>' . (intval($year) + 20) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 21) .  '</td>
-        <td>' . (intval($year) + 22) .  '</td>
-        <td>' . (intval($year) + 23) .  '</td>
-        <td>' . (intval($year) + 24) .  '</td>
-        <td>' . (intval($year) + 25) .  '</td>
-        <td>' . (intval($year) + 26) .  '</td>
-        <td>' . (intval($year) + 27) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 28) .  '</td>
-        <td>' . (intval($year) + 29) .  '</td>
-        <td>' . (intval($year) + 30) .  '</td>
-        <td>' . (intval($year) + 31) .  '</td>
-        <td>' . (intval($year) + 32) .  '</td>
-        <td>' . (intval($year) + 33) .  '</td>
-        <td>' . (intval($year) + 34) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 35) .  '</td>
-        <td>' . (intval($year) + 36) .  '</td>
-        <td>' . (intval($year) + 37) .  '</td>
-        <td>' . (intval($year) + 38) .  '</td>
-        <td>' . (intval($year) + 39) .  '</td>
-        <td>' . (intval($year) + 40) .  '</td>
-        <td>' . (intval($year) + 41) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 42) .  '</td>
-        <td>' . (intval($year) + 43) .  '</td>
-        <td>' . (intval($year) + 44) .  '</td>
-        <td>' . (intval($year) + 45) .  '</td>
-        <td>' . (intval($year) + 46) .  '</td>
-        <td>' . (intval($year) + 47) .  '</td>
-        <td>' . (intval($year) + 48) .  '</td>
-    </tr>
-    <tr>
-        <td>' . (intval($year) + 49) .  '</td>
-    </tr>
-                                    </tbody>
-                                </table>
+                               ' . $table . '
                             </div>
                         </li>
                     </ul>
@@ -506,35 +431,21 @@ function calculate ($day, $month, $year, $handedness){
     return $html;
 }
 
-function generateTable($code1, $code2, $year) {
-    // Function to check if header exists and return header or dash if not
-    function checkHeader($header1, $header2) {
-        return (!empty($header1) && !empty($header2)) ? $header1 . '/' . $header2 : '-';
-    }
+function checkHeader($header1, $header2) {
+    return (!empty($header1) && $header1 !== '-' && !empty($header2) && $header2 !== '-') ? $header1 . '/' . $header2 : '-';
+}
 
-    $num1a = isset($code1[1]) && $code1[1] !== '' ? $code1[1] : '-';
-    $num2a = isset($code2[1]) && $code2[1] !== '' ? $code2[1] : '-';
-    $num1b = isset($code1[2]) && $code1[2] !== '' ? $code1[2] : '-';
-    $num2b = isset($code2[2]) && $code2[2] !== '' ? $code2[2] : '-';
-    $num1c = isset($code1[3]) && $code1[3] !== '' ? $code1[3] : '-';
-    $num2c = isset($code2[3]) && $code2[3] !== '' ? $code2[3] : '-';
-    $num1d = isset($code1[4]) && $code1[4] !== '' ? $code1[4] : '-';
-    $num2d = isset($code2[4]) && $code2[4] !== '' ? $code2[4] : '-';
-    $num1e = isset($code1[5]) && $code1[5] !== '' ? $code1[5] : '-';
-    $num2e = isset($code2[5]) && $code2[5] !== '' ? $code2[5] : '-';
-    $num1f = isset($code1[6]) && $code1[6] !== '' ? $code1[6] : '-';
-    $num2f = isset($code2[6]) && $code2[6] !== '' ? $code2[6] : '-';
-    $num1g = isset($code1[7]) && $code1[7] !== '' ? $code1[7] : '-';
-    $num2g = isset($code2[7]) && $code2[7] !== '' ? $code2[7] : '-';
+function generateTable($code1, $code2, $year) {
+
 
     $headers = [
-        checkHeader($num1a, $num2a),
-        checkHeader($num1b, $num2b),
-        checkHeader($num1c, $num2c),
-        checkHeader($num1d, $num2d),
-        checkHeader($num1e, $num2e),
-        checkHeader($num1f, $num2f),
-        checkHeader($num1g, $num2g)
+        checkHeader($code1[1], $code2[1]),
+        checkHeader($code1[2], $code2[2]),
+        checkHeader($code1[3], $code2[3]),
+        checkHeader($code1[4], $code2[4]),
+        checkHeader($code1[5], $code2[5]),
+        checkHeader($code1[6], $code2[6]),
+        checkHeader($code1[7], $code2[7])
     ];
 
     $html = '<table>
@@ -548,8 +459,7 @@ function generateTable($code1, $code2, $year) {
         <tbody>';
 
     $yearCounter = intval($year);
-    $totalYears = 50; // Total number of years to display
-    $yearsArray = range($yearCounter, $yearCounter + $totalYears - 1); // Generate array of years
+    $totalYears = 60; // Total number of years to display
 
     for ($i = 0; $i < $totalYears; $i += 7) {
         $html .= '<tr>';
@@ -557,8 +467,11 @@ function generateTable($code1, $code2, $year) {
             if ($headers[$j] == '-') {
                 $html .= '<td>-</td>';
             } else {
-                if (isset($yearsArray[$i + $j])) {
-                    $html .= '<td>' . $yearsArray[$i + $j] . '</td>';
+                if ($i + $j < $totalYears) {
+                    $html .= '<td>' . $yearCounter . '</td>';
+                    $yearCounter++;
+                } else {
+                    $html .= '<td>-</td>';
                 }
             }
         }
