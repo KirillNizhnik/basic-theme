@@ -5,6 +5,9 @@ $STATIC_GROUND = 28;
 $STATIC_SUN = 33;
 
 
+function checkHeader($header1, $header2) {
+    return (!empty($header1) && !empty($header2)) ? $header1 . '/' . $header2 : '-';
+}
 
 function calculate ($day, $month, $year, $handedness){
     $year_number_list = get_year_numbers($year);
@@ -80,7 +83,11 @@ function calculate ($day, $month, $year, $handedness){
     $fin_code = $muladhara * $manipura;
     $code1 = $code['code1'];
     $code2 = $code['code2'];
-    $html = '<section class="calculator-response" id="calculator-response">
+    $num1e = isset($code1[7]) && $code1[7] !== '' ? $code1[7] : '-';
+    $num2e = isset($code2[7]) && $code2[7] !== '' ? $code2[7] : '-';
+    $code1[7] = $num1e;
+    $code2[7] = $num2e;
+ $html = '<section class="calculator-response" id="calculator-response">
         <div class="container">
             <div class="calculator-response-inner" id="response">
                 <div class="calculator-response-user-info">
@@ -369,10 +376,10 @@ function calculate ($day, $month, $year, $handedness){
                                 більше 60 років
                             </div>
                             <div class="calculator-response-periods-of-life-item-num-1">
-                                ' . $code1[7] . '
+                                ' . $num1e . '
                             </div>
                             <div class="calculator-response-periods-of-life-item-num-2">
-                                ' . $code2[7] . '
+                                ' . $num2e . '
                             </div>
                         </li>
                     </ul>
@@ -498,6 +505,72 @@ function calculate ($day, $month, $year, $handedness){
     </section>';
     return $html;
 }
+
+function generateTable($code1, $code2, $year) {
+    // Function to check if header exists and return header or dash if not
+    function checkHeader($header1, $header2) {
+        return (!empty($header1) && !empty($header2)) ? $header1 . '/' . $header2 : '-';
+    }
+
+    $num1a = isset($code1[1]) && $code1[1] !== '' ? $code1[1] : '-';
+    $num2a = isset($code2[1]) && $code2[1] !== '' ? $code2[1] : '-';
+    $num1b = isset($code1[2]) && $code1[2] !== '' ? $code1[2] : '-';
+    $num2b = isset($code2[2]) && $code2[2] !== '' ? $code2[2] : '-';
+    $num1c = isset($code1[3]) && $code1[3] !== '' ? $code1[3] : '-';
+    $num2c = isset($code2[3]) && $code2[3] !== '' ? $code2[3] : '-';
+    $num1d = isset($code1[4]) && $code1[4] !== '' ? $code1[4] : '-';
+    $num2d = isset($code2[4]) && $code2[4] !== '' ? $code2[4] : '-';
+    $num1e = isset($code1[5]) && $code1[5] !== '' ? $code1[5] : '-';
+    $num2e = isset($code2[5]) && $code2[5] !== '' ? $code2[5] : '-';
+    $num1f = isset($code1[6]) && $code1[6] !== '' ? $code1[6] : '-';
+    $num2f = isset($code2[6]) && $code2[6] !== '' ? $code2[6] : '-';
+    $num1g = isset($code1[7]) && $code1[7] !== '' ? $code1[7] : '-';
+    $num2g = isset($code2[7]) && $code2[7] !== '' ? $code2[7] : '-';
+
+    $headers = [
+        checkHeader($num1a, $num2a),
+        checkHeader($num1b, $num2b),
+        checkHeader($num1c, $num2c),
+        checkHeader($num1d, $num2d),
+        checkHeader($num1e, $num2e),
+        checkHeader($num1f, $num2f),
+        checkHeader($num1g, $num2g)
+    ];
+
+    $html = '<table>
+        <thead>
+            <tr>';
+    foreach ($headers as $header) {
+        $html .= '<th>' . $header . '</th>';
+    }
+    $html .= '</tr>
+        </thead>
+        <tbody>';
+
+    $yearCounter = intval($year);
+    $totalYears = 50; // Total number of years to display
+    $yearsArray = range($yearCounter, $yearCounter + $totalYears - 1); // Generate array of years
+
+    for ($i = 0; $i < $totalYears; $i += 7) {
+        $html .= '<tr>';
+        for ($j = 0; $j < 7; $j++) {
+            if ($headers[$j] == '-') {
+                $html .= '<td>-</td>';
+            } else {
+                if (isset($yearsArray[$i + $j])) {
+                    $html .= '<td>' . $yearsArray[$i + $j] . '</td>';
+                }
+            }
+        }
+        $html .= '</tr>';
+    }
+
+    $html .= '</tbody>
+    </table>';
+
+    return $html;
+}
+
 
 function  get_want($yin, $yang){
     if ($yin > $yang){
